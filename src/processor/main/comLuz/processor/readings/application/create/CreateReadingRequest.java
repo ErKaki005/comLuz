@@ -15,8 +15,8 @@ public final class CreateReadingRequest {
 	
 	public CreateReadingRequest (ReadingId id, ReadingDate fecha, ReadingImport importe) {
 		this.id=id;
-		this.importe=importe;
 		this.fecha=fecha;
+		this.importe=importe;
 		
 	}
 	
@@ -31,6 +31,19 @@ public final class CreateReadingRequest {
 
 	public ReadingDate fecha() {
 		return fecha;
+	}
+	
+	public String idStr() {
+		return id.value();
+	}
+
+	public Integer importeStr() {
+		return importe.value();
+	}
+
+
+	public String fechaStr() {
+		return fecha.value();
 	}
 	
 	@Override

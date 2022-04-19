@@ -9,9 +9,9 @@ public final class ReadingMother {
 
     public static Reading fromRequest(CreateReadingRequest request) {
         return create(
-            ReadingIdMother.create(request.id()),
-            ReadingDateMother.create(request.fecha()),
-            ReadingImportMother.create(request.importe())
+            ReadingIdMother.create(request.idStr()),
+            ReadingDateMother.create(request.fechaStr()),
+            ReadingImportMother.create(request.importeStr())
         );
     }
 

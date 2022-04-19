@@ -1,10 +1,10 @@
 package comLuz.processor.readings.domain;
 
-import shared.comLuz.domain.StringValueObject;
+import shared.comLuz.domain.IntValueObject;
 
-public final class ReadingImport extends StringValueObject{
+public final class ReadingImport extends IntValueObject{
 
-    public ReadingImport(String value) {
+    public ReadingImport(Integer value) {
         super(value);
     }
 

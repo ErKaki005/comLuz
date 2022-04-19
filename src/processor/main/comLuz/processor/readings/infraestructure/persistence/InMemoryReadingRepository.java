@@ -1,4 +1,4 @@
-package comLuz.processor.readings.infraestructure;
+package comLuz.processor.readings.infraestructure.persistence;
 
 import java.util.HashMap;
 import java.util.Optional;

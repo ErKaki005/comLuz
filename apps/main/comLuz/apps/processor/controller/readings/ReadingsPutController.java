@@ -38,9 +38,9 @@ public final class ReadingsPutController {
 
 final class Request {
     private String fecha;
-    private String importe;
+    private Integer importe;
 
-    public void setImporte(String importe) {
+    public void setImporte(Integer importe) {
         this.importe = importe;
     }
 
@@ -52,7 +52,7 @@ final class Request {
         return fecha;
     }
 
-    String importe() {
+    Integer importe() {
         return importe;
     }
 }

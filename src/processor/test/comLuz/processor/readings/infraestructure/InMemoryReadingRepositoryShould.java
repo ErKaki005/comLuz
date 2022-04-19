@@ -5,19 +5,21 @@ import java.util.Optional;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
+import comLuz.processor.readings.ReadingsModuleInfraestructureTestCase;
 import comLuz.processor.readings.domain.Reading;
-import comLuz.processor.readings.domain.ReadingDateMother;
 import comLuz.processor.readings.domain.ReadingId;
-import comLuz.processor.readings.domain.ReadingImportMother;
+import comLuz.processor.readings.domain.ReadingMother;
+import comLuz.processor.readings.infraestructure.persistence.InMemoryReadingRepository;
+import shared.comLuz.domain.UuidMother;
 
-final class InMemoryReadingRepositoryShould {
+final class InMemoryReadingRepositoryShould extends ReadingsModuleInfraestructureTestCase {
 	
 	@Test
 	public void save_a_valid_reading() {
 		
-		InMemoryReadingRepository repository = new InMemoryReadingRepository();
+		Reading reading = ReadingMother.random();
 		
-		repository.save(new Reading(new ReadingId("some-id"),ReadingDateMother.random(), ReadingImportMother.random()));
+		repository.save(reading);
 		
 	}
 	
@@ -27,7 +29,7 @@ final class InMemoryReadingRepositoryShould {
 	
 		InMemoryReadingRepository repository = new InMemoryReadingRepository();
 		
-		Reading reading = new Reading(new ReadingId("some-id"),ReadingDateMother.random(), ReadingImportMother.random());
+		Reading reading = ReadingMother.random();
 		
 		repository.save(reading);
 		
@@ -42,11 +44,11 @@ final class InMemoryReadingRepositoryShould {
 	
 		InMemoryReadingRepository repository = new InMemoryReadingRepository();
 		
-		Reading reading = new Reading(new ReadingId("some-id"),ReadingDateMother.random(), ReadingImportMother.random());
+		Reading reading = ReadingMother.random();
 		
 		repository.save(reading);
 		
-		Assert.assertFalse(repository.search(new ReadingId("some-non-existing-id")).isPresent());
+		Assert.assertFalse(repository.search(new ReadingId(UuidMother.random())).isPresent());
 	
 	}
 	
