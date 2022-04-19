@@ -5,19 +5,19 @@ import java.util.Objects;
 public final class Reading {
 
 
-	private final ReadingId id;
+	private final ReadingClientId clientId;
 	private final ReadingDate fecha;
 	private final ReadingImport importe;
 	
 	
-	public Reading(ReadingId id, ReadingDate fecha, ReadingImport importe) {
-		this.id=id;
+	public Reading(ReadingClientId clientId, ReadingDate fecha, ReadingImport importe) {
+		this.clientId=clientId;
 		this.fecha=fecha;
 		this.importe=importe;
 	}
 
-	public ReadingId id() {
-		return id;
+	public ReadingClientId clientId() {
+		return clientId;
 	}
 
 	public ReadingImport importe() {
@@ -42,7 +42,7 @@ public final class Reading {
 		
 		Reading reading = (Reading) o;
 		
-		return Objects.equals(id, reading.id()) &&
+		return Objects.equals(clientId, reading.clientId()) &&
 				Objects.equals(importe, reading.importe()) &&
 				Objects.equals(fecha, reading.fecha()) ;
 		

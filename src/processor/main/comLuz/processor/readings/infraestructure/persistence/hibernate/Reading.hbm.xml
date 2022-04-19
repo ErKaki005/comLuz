@@ -5,7 +5,7 @@
 
 <hibernate-mapping>
     <class name="comLuz.processor.readings.domain.Reading" table="readings">
-        <composite-id name="id" class="tv.codely.mooc.courses.domain.ReadingId" access="field">
+        <composite-id name="clientId" class="comLuz.processor.readings.domain.ReadingClientId" access="field">
             <key-property name="value" column="client_id" length="36" access="field" />
         </composite-id>
 

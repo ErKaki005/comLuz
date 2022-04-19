@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import comLuz.processor.readings.ReadingsModuleInfraestructureTestCase;
 import comLuz.processor.readings.domain.Reading;
-import comLuz.processor.readings.domain.ReadingId;
+import comLuz.processor.readings.domain.ReadingClientId;
 import comLuz.processor.readings.domain.ReadingMother;
 import comLuz.processor.readings.infraestructure.persistence.InMemoryReadingRepository;
 import shared.comLuz.domain.UuidMother;
@@ -33,7 +33,7 @@ final class InMemoryReadingRepositoryShould extends ReadingsModuleInfraestructur
 		
 		repository.save(reading);
 		
-		Assert.assertEquals(Optional.of(reading), repository.search(reading.id()));
+		Assert.assertEquals(Optional.of(reading), repository.search(reading.clientId()));
 	
 	}
 
@@ -48,7 +48,7 @@ final class InMemoryReadingRepositoryShould extends ReadingsModuleInfraestructur
 		
 		repository.save(reading);
 		
-		Assert.assertFalse(repository.search(new ReadingId(UuidMother.random())).isPresent());
+		Assert.assertFalse(repository.search(new ReadingClientId(UuidMother.random())).isPresent());
 	
 	}
 	

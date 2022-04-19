@@ -18,7 +18,7 @@ public class ProcessorMySqlEventBusConfiguration {
     private final SpringApplicationEventBus bus;
 
     public ProcessorMySqlEventBusConfiguration(
-        @Qualifier("mooc-session_factory") SessionFactory sessionFactory,
+        @Qualifier("processor-session_factory") SessionFactory sessionFactory,
         DomainEventsInformation domainEventsInformation,
         SpringApplicationEventBus bus
     ) {

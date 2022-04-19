@@ -15,7 +15,6 @@ final class ReadingCreatorShould extends ReadingsModuleUnitTestCase{
 	
 	protected void setUp() {
 		super.setUp();
-		
 		creator =  new ReadingCreator(repository);
 	}
 	

@@ -17,7 +17,7 @@ public final class ReadingCreator {
 
 	public void create(CreateReadingRequest request) {
 		
-		Reading reading = new Reading(request.id(), request.fecha(), request.importe());
+		Reading reading = new Reading(request.clientId(), request.fecha(), request.importe());
 		
 		repository.save(reading);
 		

@@ -7,5 +7,9 @@ public final class ReadingImport extends IntValueObject{
     public ReadingImport(Integer value) {
         super(value);
     }
+    
+    private ReadingImport() {
+    	super(0);
+    }
 
 }
