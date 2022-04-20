@@ -5,7 +5,7 @@ import org.hibernate.query.NativeQuery;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 import shared.comLuz.domain.Utils;
-import shared.comLuz.domain.event.DomainEvent;
+import shared.comLuz.domain.bus.event.DomainEvent;
 import shared.comLuz.infraestructure.bus.event.DomainEventsInformation;
 import shared.comLuz.infraestructure.bus.event.spring.SpringApplicationEventBus;
 

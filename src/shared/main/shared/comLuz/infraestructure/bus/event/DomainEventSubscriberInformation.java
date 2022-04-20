@@ -5,7 +5,8 @@ package shared.comLuz.infraestructure.bus.event;
 import java.util.List;
 
 import shared.comLuz.domain.Utils;
-import shared.comLuz.domain.event.DomainEvent;
+import shared.comLuz.domain.bus.event.DomainEvent;
+
 
 public final class DomainEventSubscriberInformation {
     private final Class<?>                           subscriberClass;

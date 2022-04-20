@@ -6,7 +6,7 @@ import org.springframework.amqp.core.MessagePropertiesBuilder;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
 import shared.comLuz.domain.Service;
-import shared.comLuz.domain.event.DomainEvent;
+import shared.comLuz.domain.bus.event.DomainEvent;
 import shared.comLuz.infraestructure.bus.event.DomainEventJsonSerializer;
 
 

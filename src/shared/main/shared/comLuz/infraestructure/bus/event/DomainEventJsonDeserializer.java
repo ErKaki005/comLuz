@@ -9,7 +9,8 @@ import java.util.HashMap;
 
 import shared.comLuz.domain.Service;
 import shared.comLuz.domain.Utils;
-import shared.comLuz.domain.event.DomainEvent;
+import shared.comLuz.domain.bus.event.DomainEvent;
+
 
 @Service
 public final class DomainEventJsonDeserializer {

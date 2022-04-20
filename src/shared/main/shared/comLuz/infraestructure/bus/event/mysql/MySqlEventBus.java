@@ -4,8 +4,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.NativeQuery;
 
 import shared.comLuz.domain.Utils;
-import shared.comLuz.domain.event.DomainEvent;
-import shared.comLuz.domain.event.EventBus;
+import shared.comLuz.domain.bus.event.DomainEvent;
+import shared.comLuz.domain.bus.event.EventBus;
 
 import java.io.Serializable;
 import java.util.HashMap;

@@ -3,7 +3,7 @@ package shared.comLuz.infraestructure.bus.event;
 import org.reflections.Reflections;
 
 import shared.comLuz.domain.Service;
-import shared.comLuz.domain.event.DomainEventSubscriber;
+import shared.comLuz.domain.bus.event.DomainEventSubscriber;
 
 import java.util.Arrays;
 import java.util.Collection;

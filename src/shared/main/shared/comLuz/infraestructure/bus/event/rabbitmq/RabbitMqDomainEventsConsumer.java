@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContext;
 
 import shared.comLuz.domain.Service;
 import shared.comLuz.domain.Utils;
-import shared.comLuz.domain.event.DomainEvent;
+import shared.comLuz.domain.bus.event.DomainEvent;
 import shared.comLuz.infraestructure.bus.event.DomainEventJsonDeserializer;
 import shared.comLuz.infraestructure.bus.event.DomainEventSubscribersInformation;
 

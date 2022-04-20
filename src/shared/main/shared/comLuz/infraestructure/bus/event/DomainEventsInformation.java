@@ -3,7 +3,7 @@ package shared.comLuz.infraestructure.bus.event;
 import org.reflections.Reflections;
 
 import shared.comLuz.domain.Service;
-import shared.comLuz.domain.event.DomainEvent;
+import shared.comLuz.domain.bus.event.DomainEvent;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;

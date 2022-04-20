@@ -4,8 +4,8 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Primary;
 
 import shared.comLuz.domain.Service;
-import shared.comLuz.domain.event.DomainEvent;
-import shared.comLuz.domain.event.EventBus;
+import shared.comLuz.domain.bus.event.DomainEvent;
+import shared.comLuz.domain.bus.event.EventBus;
 
 import java.util.List;
 

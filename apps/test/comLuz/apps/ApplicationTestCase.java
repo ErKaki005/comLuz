@@ -1,18 +1,24 @@
 package comLuz.apps;
 
+import org.junit.Before;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultMatcher;
-//import comLuz.shared.domain.bus.event.DomainEvent;
-//import ComLuz.shared.domain.bus.event.EventBus;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
-//import java.util.Arrays;
+import shared.comLuz.domain.bus.event.DomainEvent;
+import shared.comLuz.domain.bus.event.EventBus;
+
+import java.util.Arrays;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -22,14 +28,26 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@ExtendWith(SpringExtension.class)
 @AutoConfigureMockMvc
 public abstract class ApplicationTestCase {
+    
+    
     @Autowired
-    private MockMvc  mockMvc;
-    //APC
+    private EventBus eventBus;
+    
+    
     //@Autowired
-    //private EventBus eventBus;
+    //private WebApplicationContext webApplicationContext;
 
+    private MockMvc mockMvc;
+
+    @Before
+    public void setup(WebApplicationContext webApplicationContext) {
+    	mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+    }
+    
+    
     protected void assertResponse(
         String endpoint,
         Integer expectedStatusCode,
@@ -84,8 +102,7 @@ public abstract class ApplicationTestCase {
             .andExpect(content().string(""));
     }
 
-    //APC
-    /*protected void givenISendEventsToTheBus(DomainEvent... domainEvents) {
+    protected void givenISendEventsToTheBus(DomainEvent... domainEvents) {
         eventBus.publish(Arrays.asList(domainEvents));
-    }*/
+    }
 }

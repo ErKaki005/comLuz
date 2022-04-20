@@ -2,8 +2,8 @@ package shared.comLuz.infraestructure.bus.event.rabbitmq;
 
 import org.springframework.amqp.AmqpException;
 
-import shared.comLuz.domain.event.DomainEvent;
-import shared.comLuz.domain.event.EventBus;
+import shared.comLuz.domain.bus.event.DomainEvent;
+import shared.comLuz.domain.bus.event.EventBus;
 import shared.comLuz.infraestructure.bus.event.mysql.MySqlEventBus;
 
 import java.util.Collections;

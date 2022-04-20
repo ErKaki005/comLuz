@@ -6,7 +6,8 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 import shared.comLuz.domain.Utils;
-import shared.comLuz.domain.event.DomainEvent;
+import shared.comLuz.domain.bus.event.DomainEvent;
+
 
 public final class DomainEventJsonSerializer {
     public static String serialize(DomainEvent domainEvent) {

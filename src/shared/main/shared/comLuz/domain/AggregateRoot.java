@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import shared.comLuz.domain.event.DomainEvent;
+import shared.comLuz.domain.bus.event.DomainEvent;
+
+
 
 public abstract class AggregateRoot {
     private List<DomainEvent> domainEvents = new ArrayList<>();
