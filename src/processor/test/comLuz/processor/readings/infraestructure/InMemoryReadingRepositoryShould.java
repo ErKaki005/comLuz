@@ -5,14 +5,14 @@ import java.util.Optional;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-import comLuz.processor.readings.ReadingsModuleInfraestructureTestCase;
+import comLuz.processor.readings.ReadingsModuleInfrastructureTestCase;
 import comLuz.processor.readings.domain.Reading;
 import comLuz.processor.readings.domain.ReadingClientId;
 import comLuz.processor.readings.domain.ReadingMother;
 import comLuz.processor.readings.infraestructure.persistence.InMemoryReadingRepository;
 import shared.comLuz.domain.UuidMother;
 
-final class InMemoryReadingRepositoryShould extends ReadingsModuleInfraestructureTestCase {
+final class InMemoryReadingRepositoryShould extends ReadingsModuleInfrastructureTestCase {
 	
 	@Test
 	public void save_a_valid_reading() {

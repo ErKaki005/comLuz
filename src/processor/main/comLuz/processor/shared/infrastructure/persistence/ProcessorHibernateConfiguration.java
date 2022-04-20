@@ -6,9 +6,9 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import shared.comLuz.infraestructure.config.Parameter;
-import shared.comLuz.infraestructure.config.ParameterNotExist;
-import shared.comLuz.infraestructure.hibernate.HibernateConfigurationFactory;
+import shared.comLuz.infrastructure.config.Parameter;
+import shared.comLuz.infrastructure.config.ParameterNotExist;
+import shared.comLuz.infrastructure.hibernate.HibernateConfigurationFactory;
 
 import javax.sql.DataSource;
 import java.io.IOException;

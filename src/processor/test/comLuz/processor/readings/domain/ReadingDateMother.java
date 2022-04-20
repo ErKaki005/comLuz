@@ -4,11 +4,11 @@ import shared.comLuz.domain.WordMother;
 
 public class ReadingDateMother {
 
-    public static ReadingDate create(String value) {
-        return new ReadingDate(value);
+    public static ReadingPeriod create(String value) {
+        return new ReadingPeriod(value);
     }
 
-    public static ReadingDate random() {
+    public static ReadingPeriod random() {
         return create(WordMother.random());
     }
 	

@@ -5,10 +5,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import shared.comLuz.infraestructure.bus.event.DomainEventsInformation;
-import shared.comLuz.infraestructure.bus.event.mysql.MySqlDomainEventsConsumer;
-import shared.comLuz.infraestructure.bus.event.mysql.MySqlEventBus;
-import shared.comLuz.infraestructure.bus.event.spring.SpringApplicationEventBus;
+import shared.comLuz.infrastructure.bus.event.DomainEventsInformation;
+import shared.comLuz.infrastructure.bus.event.mysql.MySqlDomainEventsConsumer;
+import shared.comLuz.infrastructure.bus.event.mysql.MySqlEventBus;
+import shared.comLuz.infrastructure.bus.event.spring.SpringApplicationEventBus;
 
 
 @Configuration
