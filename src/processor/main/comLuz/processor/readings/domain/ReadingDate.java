@@ -8,4 +8,8 @@ public final class ReadingDate extends StringValueObject{
         super(value);
     }
 	
+    private ReadingDate() {
+        super("");
+    }
+    
 }

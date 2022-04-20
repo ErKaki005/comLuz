@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="comLuz.processor.readings.domain.Reading" table="readings">
+        <composite-id name="clientId" class="comLuz.processor.readings.domain.ReadingClientId" access="field">
+            <key-property name="value" column="client_id" length="36" access="field" />
+        </composite-id>
+
+        <component name="fecha" class="comLuz.processor.readings.domain.ReadingDate" access="field">
+            <property name="value" column="fecha" type="string" access="field" />
+        </component>
+
+        <component name="importe" class="comLuz.processor.readings.domain.ReadingImport" access="field">
+            <property name="value" column="importe" type="int" access="field" />
+        </component>
+    </class>
+</hibernate-mapping>

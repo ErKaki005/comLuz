@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import comLuz.processor.readings.application.create.CreateReadingRequest;
 import comLuz.processor.readings.application.create.ReadingCreator;
 import comLuz.processor.readings.domain.ReadingDate;
-import comLuz.processor.readings.domain.ReadingId;
+import comLuz.processor.readings.domain.ReadingClientId;
 import comLuz.processor.readings.domain.ReadingImport;
 
 
@@ -24,10 +24,10 @@ public final class ReadingsPutController {
 	}
 	
     @PutMapping(value = "/readings/{id}")
-    public ResponseEntity<String> index( @PathVariable String id, @RequestBody Request request ){ 
+    public ResponseEntity<String> index( @PathVariable String ClientId, @RequestBody Request request ){ 
     	
     	    	
-    	creator.create(new CreateReadingRequest(new ReadingId(id), 
+    	creator.create(new CreateReadingRequest(new ReadingClientId(ClientId), 
 				new ReadingDate(request.fecha()), 
 				new ReadingImport(request.importe())));
         return new ResponseEntity<>(HttpStatus.CREATED);
@@ -38,9 +38,9 @@ public final class ReadingsPutController {
 
 final class Request {
     private String fecha;
-    private String importe;
+    private Integer importe;
 
-    public void setImporte(String importe) {
+    public void setImporte(Integer importe) {
         this.importe = importe;
     }
 
@@ -52,7 +52,7 @@ final class Request {
         return fecha;
     }
 
-    String importe() {
+    Integer importe() {
         return importe;
     }
 }

@@ -3,25 +3,25 @@ package comLuz.processor.readings.application.create;
 import java.util.Objects;
 
 import comLuz.processor.readings.domain.ReadingDate;
-import comLuz.processor.readings.domain.ReadingId;
+import comLuz.processor.readings.domain.ReadingClientId;
 import comLuz.processor.readings.domain.ReadingImport;
 
 
 public final class CreateReadingRequest {
 
-	private final ReadingId id;
+	private final ReadingClientId clientId;
 	private final ReadingImport importe;
 	private final ReadingDate fecha;
 	
-	public CreateReadingRequest (ReadingId id, ReadingDate fecha, ReadingImport importe) {
-		this.id=id;
-		this.importe=importe;
+	public CreateReadingRequest (ReadingClientId clientId, ReadingDate fecha, ReadingImport importe) {
+		this.clientId=clientId;
 		this.fecha=fecha;
+		this.importe=importe;
 		
 	}
 	
-	public ReadingId id() {
-		return id;
+	public ReadingClientId clientId() {
+		return clientId;
 	}
 
 	public ReadingImport importe() {
@@ -31,6 +31,19 @@ public final class CreateReadingRequest {
 
 	public ReadingDate fecha() {
 		return fecha;
+	}
+	
+	public String clientIdStr() {
+		return clientId.value();
+	}
+
+	public Integer importeInt() {
+		return importe.value();
+	}
+
+
+	public String fechaStr() {
+		return fecha.value();
 	}
 	
 	@Override
@@ -46,7 +59,7 @@ public final class CreateReadingRequest {
 		
 		CreateReadingRequest createReadingRequest = (CreateReadingRequest) o;
 		
-		return Objects.equals(id, createReadingRequest.id()) &&
+		return Objects.equals(clientId, createReadingRequest.clientId()) &&
 				Objects.equals(importe, createReadingRequest.importe()) &&
 				Objects.equals(fecha, createReadingRequest.fecha()) ;
 		

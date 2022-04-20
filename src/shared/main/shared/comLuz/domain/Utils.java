@@ -2,7 +2,7 @@ package shared.comLuz.domain;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-//import com.google.common.base.CaseFormat;
+import com.google.common.base.CaseFormat;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -36,7 +36,7 @@ public final class Utils {
         }
     }
 
-    /*public static String toSnake(String text) {
+    public static String toSnake(String text) {
         return CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, text);
     }
 
@@ -46,5 +46,5 @@ public final class Utils {
 
     public static String toCamelFirstLower(String text) {
         return CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, text);
-    }*/
+    }
 }

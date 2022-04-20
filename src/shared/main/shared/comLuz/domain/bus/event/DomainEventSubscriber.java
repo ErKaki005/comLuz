@@ -1,4 +1,4 @@
-package shared.comLuz.domain.event;
+package shared.comLuz.domain.bus.event;
 
 import java.lang.annotation.*;
 

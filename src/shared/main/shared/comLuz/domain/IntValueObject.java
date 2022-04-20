@@ -12,7 +12,7 @@ public abstract class IntValueObject {
     public Integer value() {
         return value;
     }
-
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) {
