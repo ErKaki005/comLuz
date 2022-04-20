@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Component;
 
 import comLuz.processor.readings.domain.Reading;
 import comLuz.processor.readings.domain.ReadingClientId;
@@ -12,6 +13,7 @@ import shared.comLuz.domain.Service;
 import shared.comLuz.domain.criteria.Criteria;
 
 @Service
+@Component("InMemoryReadingRepository")
 public final class InMemoryReadingRepository implements ReadingRepository{
 
 	HashMap<ReadingClientId, Reading> readings = new HashMap <>();

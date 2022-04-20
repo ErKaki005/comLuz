@@ -28,12 +28,12 @@ public class ProcessorMySqlEventBusConfiguration {
     }
 
     @Bean
-    public MySqlEventBus moocMysqlEventBus() {
+    public MySqlEventBus processorMysqlEventBus() {
         return new MySqlEventBus(sessionFactory);
     }
 
     @Bean
-    public MySqlDomainEventsConsumer moocMySqlDomainEventsConsumer() {
+    public MySqlDomainEventsConsumer processorMySqlDomainEventsConsumer() {
         return new MySqlDomainEventsConsumer(sessionFactory, domainEventsInformation, bus);
     }
 }

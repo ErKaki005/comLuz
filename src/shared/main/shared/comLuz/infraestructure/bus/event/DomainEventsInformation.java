@@ -16,7 +16,7 @@ public final class DomainEventsInformation {
     HashMap<String, Class<? extends DomainEvent>> indexedDomainEvents;
 
     public DomainEventsInformation() {
-        Reflections                       reflections = new Reflections("tv.codely");
+        Reflections                       reflections = new Reflections("comLuz");
         Set<Class<? extends DomainEvent>> classes     = reflections.getSubTypesOf(DomainEvent.class);
 
         try {

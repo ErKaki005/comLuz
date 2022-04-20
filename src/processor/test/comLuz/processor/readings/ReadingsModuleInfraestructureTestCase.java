@@ -8,7 +8,6 @@ import shared.comLuz.insfrastructure.InfrastructureTestCase;
 public abstract class ReadingsModuleInfraestructureTestCase extends InfrastructureTestCase{
 
 	@Autowired
-	
 	protected InMemoryReadingRepository repository;
 	
 }

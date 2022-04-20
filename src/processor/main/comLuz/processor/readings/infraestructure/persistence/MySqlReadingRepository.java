@@ -2,6 +2,7 @@ package comLuz.processor.readings.infraestructure.persistence;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import comLuz.processor.readings.domain.Reading;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Component("MySqlReadingRepository")
 @Transactional("processor-transaction_manager")
 public class MySqlReadingRepository extends HibernateRepository<Reading> implements ReadingRepository {
     public MySqlReadingRepository(@Qualifier("processor-session_factory") SessionFactory sessionFactory) {

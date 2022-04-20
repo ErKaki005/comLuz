@@ -20,7 +20,7 @@ import shared.comLuz.domain.Service;
 	    value = {"comLuz.processor.*","comLuz.apps.*","shared.comLuz.*"}
 	)
 
-public class Starter {
+public class Starter implements CommandLineRunner{
 
 	public static void main(String[] args) {
 		
@@ -28,7 +28,7 @@ public class Starter {
 		app.setWebApplicationType(WebApplicationType.NONE);
 		app.run(args);
 		//SpringApplication.run(Starter.class, args);
-		System.out.println("Hola que tal");
+		
 	}
 
 	@Bean
@@ -41,6 +41,12 @@ public class Starter {
 	            System.out.println(beanName);
 	        }
 	    };
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("Hola que tal");
 	}
 	
 }

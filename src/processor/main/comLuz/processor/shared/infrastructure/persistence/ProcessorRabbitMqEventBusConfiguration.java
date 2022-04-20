@@ -23,7 +23,7 @@ public class ProcessorRabbitMqEventBusConfiguration {
     }
 
     @Bean
-    public RabbitMqEventBus moocRabbitMqEventBus() {
+    public RabbitMqEventBus processsorRabbitMqEventBus() {
         return new RabbitMqEventBus(publisher, failoverPublisher);
     }
 }

@@ -20,7 +20,7 @@ public class EnvironmentConfig {
 
         return Dotenv
             .configure()
-            .directory("/")
+            //.directory(".")
             .filename(resource.exists() ? ".env.local" : ".env")
             .load();
     }

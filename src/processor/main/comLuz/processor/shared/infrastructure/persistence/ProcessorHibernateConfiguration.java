@@ -38,11 +38,11 @@ public class ProcessorHibernateConfiguration {
     @Bean("processor-data_source")
     public DataSource dataSource() throws IOException, ParameterNotExist {
         return factory.dataSource(
-            config.get("MOOC_DATABASE_HOST"),
-            config.getInt("MOOC_DATABASE_PORT"),
-            config.get("MOOC_DATABASE_NAME"),
-            config.get("MOOC_DATABASE_USER"),
-            config.get("MOOC_DATABASE_PASSWORD")
+            config.get("DATABASE_HOST"),
+            config.getInt("DATABASE_PORT"),
+            config.get("DATABASE_NAME"),
+            config.get("DATABASE_USER"),
+            config.get("DATABASE_PASSWORD")
         );
     }
 }

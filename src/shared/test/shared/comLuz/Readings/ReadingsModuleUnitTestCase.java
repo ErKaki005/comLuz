@@ -10,7 +10,6 @@ import static org.mockito.Mockito.*;
 
 public abstract class ReadingsModuleUnitTestCase extends UnitTestCase{
 
-    
 	protected ReadingRepository repository;
 
     @BeforeEach
