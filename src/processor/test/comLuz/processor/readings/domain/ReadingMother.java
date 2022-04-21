@@ -3,7 +3,7 @@ package comLuz.processor.readings.domain;
 import comLuz.processor.readings.application.create.CreateReadingRequest;
 
 public final class ReadingMother {
-    public static Reading create(ReadingClientId clientId, ReadingDate fecha, ReadingImport importe) {
+    public static Reading create(ReadingClientId clientId, ReadingPeriod fecha, ReadingAmount importe) {
         return new Reading(clientId, fecha, importe);
     }
 

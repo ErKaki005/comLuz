@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS readings (
     client_id   CHAR(36)     NOT NULL,
-    fecha       CHAR(7) NOT NULL,
-    importe INT NOT NULL,
+    period       CHAR(7) NOT NULL,
+    amount INT NOT NULL,
     PRIMARY KEY (id,fecha)
 )
     ENGINE = InnoDB
@@ -10,8 +10,8 @@ CREATE TABLE IF NOT EXISTS readings (
 
 CREATE TABLE IF NOT EXISTS suspicious_readings (
     client_id       CHAR(36) NOT NULL,
-    month           CHAR(7)  NOT NULL,
-    reading         INT      NOT NULL,
+    period           CHAR(7)  NOT NULL,
+    amount         INT      NOT NULL,
     median          INT      NOT NULL    
     PRIMARY KEY (id,month)
 )

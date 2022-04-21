@@ -6,11 +6,11 @@ public final class Reading {
 
 
 	private final ReadingClientId clientId;
-	private final ReadingDate fecha;
-	private final ReadingImport importe;
+	private final ReadingPeriod fecha;
+	private final ReadingAmount importe;
 	
 	
-	public Reading(ReadingClientId clientId, ReadingDate fecha, ReadingImport importe) {
+	public Reading(ReadingClientId clientId, ReadingPeriod fecha, ReadingAmount importe) {
 		this.clientId=clientId;
 		this.fecha=fecha;
 		this.importe=importe;
@@ -20,11 +20,11 @@ public final class Reading {
 		return clientId;
 	}
 
-	public ReadingImport importe() {
+	public ReadingAmount importe() {
 		return importe;
 	}
 
-	public ReadingDate fecha() {
+	public ReadingPeriod fecha() {
 		return fecha;
 	}
 

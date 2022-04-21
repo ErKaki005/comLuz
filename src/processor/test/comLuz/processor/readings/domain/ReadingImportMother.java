@@ -4,11 +4,11 @@ import shared.comLuz.domain.IntMother;
 
 public final class ReadingImportMother {
 
-    public static ReadingImport create(Integer value) {
-        return new ReadingImport(value);
+    public static ReadingAmount create(Integer value) {
+        return new ReadingAmount(value);
     }
 
-    public static ReadingImport random() {
+    public static ReadingAmount random() {
         return create(IntMother.random());
     }
 	

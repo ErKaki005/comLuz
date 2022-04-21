@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import shared.comLuz.infraestructure.bus.event.mysql.MySqlEventBus;
-import shared.comLuz.infraestructure.bus.event.rabbitmq.RabbitMqEventBus;
-import shared.comLuz.infraestructure.bus.event.rabbitmq.RabbitMqPublisher;
+import shared.comLuz.infrastructure.bus.event.mysql.MySqlEventBus;
+import shared.comLuz.infrastructure.bus.event.rabbitmq.RabbitMqEventBus;
+import shared.comLuz.infrastructure.bus.event.rabbitmq.RabbitMqPublisher;
 
 
 @Configuration

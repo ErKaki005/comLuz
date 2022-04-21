@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import comLuz.processor.readings.application.create.CreateReadingRequest;
 import comLuz.processor.readings.application.create.ReadingCreator;
-import comLuz.processor.readings.domain.ReadingDate;
+import comLuz.processor.readings.domain.ReadingPeriod;
 import comLuz.processor.readings.domain.ReadingClientId;
-import comLuz.processor.readings.domain.ReadingImport;
+import comLuz.processor.readings.domain.ReadingAmount;
 
 
 @RestController
@@ -28,8 +28,8 @@ public final class ReadingsPutController {
     	
     	    	
     	creator.create(new CreateReadingRequest(new ReadingClientId(ClientId), 
-				new ReadingDate(request.fecha()), 
-				new ReadingImport(request.importe())));
+				new ReadingPeriod(request.fecha()), 
+				new ReadingAmount(request.importe())));
         return new ResponseEntity<>(HttpStatus.CREATED);
         
     }

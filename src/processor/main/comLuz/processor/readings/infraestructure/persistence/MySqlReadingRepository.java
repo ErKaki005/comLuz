@@ -10,7 +10,7 @@ import comLuz.processor.readings.domain.ReadingClientId;
 import comLuz.processor.readings.domain.ReadingRepository;
 import shared.comLuz.domain.Service;
 import shared.comLuz.domain.criteria.Criteria;
-import shared.comLuz.infraestructure.hibernate.HibernateRepository;
+import shared.comLuz.infrastructure.hibernate.HibernateRepository;
 
 import java.util.List;
 import java.util.Optional;
