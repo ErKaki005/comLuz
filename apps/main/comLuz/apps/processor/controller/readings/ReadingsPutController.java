@@ -28,8 +28,8 @@ public final class ReadingsPutController {
     	
     	    	
     	creator.create(new CreateReadingRequest(new ReadingClientId(ClientId), 
-				new ReadingPeriod(request.fecha()), 
-				new ReadingAmount(request.importe())));
+				new ReadingPeriod(request.period()), 
+				new ReadingAmount(request.amount())));
         return new ResponseEntity<>(HttpStatus.CREATED);
         
     }
@@ -37,22 +37,22 @@ public final class ReadingsPutController {
 }
 
 final class Request {
-    private String fecha;
-    private Integer importe;
+    private String period;
+    private Integer amount;
 
-    public void setImporte(Integer importe) {
-        this.importe = importe;
+    public void setAmount(Integer importe) {
+        this.amount = importe;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setperiod(String period) {
+        this.period = period;
     }
 
-    String fecha() {
-        return fecha;
+    String period() {
+        return period;
     }
 
-    Integer importe() {
-        return importe;
+    Integer amount() {
+        return amount;
     }
 }

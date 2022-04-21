@@ -2,7 +2,7 @@ package comLuz.processor.readings.domain;
 
 import shared.comLuz.domain.IntMother;
 
-public final class ReadingImportMother {
+public final class ReadingAmountMother {
 
     public static ReadingAmount create(Integer value) {
         return new ReadingAmount(value);

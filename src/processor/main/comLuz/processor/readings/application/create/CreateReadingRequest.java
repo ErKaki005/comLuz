@@ -10,13 +10,13 @@ import comLuz.processor.readings.domain.ReadingAmount;
 public final class CreateReadingRequest {
 
 	private final ReadingClientId clientId;
-	private final ReadingAmount importe;
-	private final ReadingPeriod fecha;
+	private final ReadingAmount amount;
+	private final ReadingPeriod period;
 	
-	public CreateReadingRequest (ReadingClientId clientId, ReadingPeriod fecha, ReadingAmount importe) {
+	public CreateReadingRequest (ReadingClientId clientId, ReadingPeriod period, ReadingAmount amount) {
 		this.clientId=clientId;
-		this.fecha=fecha;
-		this.importe=importe;
+		this.period=period;
+		this.amount=amount;
 		
 	}
 	
@@ -24,26 +24,26 @@ public final class CreateReadingRequest {
 		return clientId;
 	}
 
-	public ReadingAmount importe() {
-		return importe;
+	public ReadingAmount amount() {
+		return amount;
 	}
 
 
-	public ReadingPeriod fecha() {
-		return fecha;
+	public ReadingPeriod period() {
+		return period;
 	}
 	
 	public String clientIdStr() {
 		return clientId.value();
 	}
 
-	public Integer importeInt() {
-		return importe.value();
+	public Integer amountInt() {
+		return amount.value();
 	}
 
 
-	public String fechaStr() {
-		return fecha.value();
+	public String periodStr() {
+		return period.value();
 	}
 	
 	@Override
@@ -60,8 +60,8 @@ public final class CreateReadingRequest {
 		CreateReadingRequest createReadingRequest = (CreateReadingRequest) o;
 		
 		return Objects.equals(clientId, createReadingRequest.clientId()) &&
-				Objects.equals(importe, createReadingRequest.importe()) &&
-				Objects.equals(fecha, createReadingRequest.fecha()) ;
+				Objects.equals(amount, createReadingRequest.amount()) &&
+				Objects.equals(period, createReadingRequest.period()) ;
 		
 	}
 	

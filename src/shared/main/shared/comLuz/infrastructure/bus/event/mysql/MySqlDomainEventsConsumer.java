@@ -4,6 +4,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.NativeQuery;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import shared.comLuz.domain.Service;
 import shared.comLuz.domain.Utils;
 import shared.comLuz.domain.bus.event.DomainEvent;
 import shared.comLuz.infrastructure.bus.event.DomainEventsInformation;
@@ -17,6 +18,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+@Service
 public class MySqlDomainEventsConsumer {
     private final SessionFactory            sessionFactory;
     private final DomainEventsInformation   domainEventsInformation;

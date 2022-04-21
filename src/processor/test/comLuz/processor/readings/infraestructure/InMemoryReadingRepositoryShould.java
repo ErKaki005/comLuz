@@ -19,7 +19,7 @@ final class InMemoryReadingRepositoryShould extends ReadingsModuleInfrastructure
 		
 		Reading reading = ReadingMother.random();
 		
-		repository.save(reading);
+		inMemoryRepository.save(reading);
 		
 	}
 	
@@ -31,7 +31,7 @@ final class InMemoryReadingRepositoryShould extends ReadingsModuleInfrastructure
 		
 		Reading reading = ReadingMother.random();
 		
-		repository.save(reading);
+		inMemoryRepository.save(reading);
 		
 		Assert.assertEquals(Optional.of(reading), repository.search(reading.clientId()));
 	

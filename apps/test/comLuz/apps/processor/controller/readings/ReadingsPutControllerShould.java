@@ -10,7 +10,7 @@ public final class ReadingsPutControllerShould extends ApplicationTestCase {
         assertRequestWithBody(
             "PUT",
             "/readings/1aab45ba-3c7a-4344-8936-78466eca77fa",
-            "{\"Fecha\": \"2016-01\", \"Importe\": \"42451\"}",
+            "{\"Period\": \"2016-01\", \"Amount\": \"42451\"}",
             201
         );
     }

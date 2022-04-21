@@ -40,6 +40,7 @@ public abstract class ApplicationTestCase {
     //@Autowired
     //private WebApplicationContext webApplicationContext;
 
+    @Autowired
     private MockMvc mockMvc;
 
     @Before

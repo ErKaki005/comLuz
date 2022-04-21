@@ -2,14 +2,12 @@ package shared.comLuz.domain;
 
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.UUID;
 
 @Service
 public abstract class Identifier implements Serializable {
     final protected String value;
 
     public Identifier(String value) {
-        ensureValidUuid(value);
 
         this.value = value;
     }
@@ -39,7 +37,4 @@ public abstract class Identifier implements Serializable {
         return Objects.hash(value);
     }
 
-    private void ensureValidUuid(String value) throws IllegalArgumentException {
-        UUID.fromString(value);
-    }
 }

@@ -3,19 +3,19 @@ package comLuz.processor.readings.domain;
 import comLuz.processor.readings.application.create.CreateReadingRequest;
 
 public final class ReadingMother {
-    public static Reading create(ReadingClientId clientId, ReadingPeriod fecha, ReadingAmount importe) {
-        return new Reading(clientId, fecha, importe);
+    public static Reading create(ReadingClientId clientId, ReadingPeriod period, ReadingAmount amount) {
+        return new Reading(clientId, period, amount);
     }
 
     public static Reading fromRequest(CreateReadingRequest request) {
         return create(
             ReadingClientIdMother.create(request.clientIdStr()),
-            ReadingDateMother.create(request.fechaStr()),
-            ReadingImportMother.create(request.importeInt())
+            ReadingPeriodMother.create(request.periodStr()),
+            ReadingAmountMother.create(request.amountInt())
         );
     }
 
     public static Reading random() {
-        return create(ReadingClientIdMother.random(), ReadingDateMother.random(), ReadingImportMother.random());
+        return create(ReadingClientIdMother.random(), ReadingPeriodMother.random(), ReadingAmountMother.random());
     }
 }

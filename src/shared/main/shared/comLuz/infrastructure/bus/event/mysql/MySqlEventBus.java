@@ -2,7 +2,9 @@ package shared.comLuz.infrastructure.bus.event.mysql;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.query.NativeQuery;
+import org.springframework.context.annotation.Primary;
 
+import shared.comLuz.domain.Service;
 import shared.comLuz.domain.Utils;
 import shared.comLuz.domain.bus.event.DomainEvent;
 import shared.comLuz.domain.bus.event.EventBus;
@@ -11,6 +13,9 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 
+
+@Primary
+@Service
 public final class MySqlEventBus implements EventBus {
     private final SessionFactory sessionFactory;
 

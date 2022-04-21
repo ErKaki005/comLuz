@@ -9,12 +9,12 @@
             <key-property name="value" column="client_id" length="36" access="field" />
         </composite-id>
 
-        <component name="fecha" class="comLuz.processor.readings.domain.ReadingDate" access="field">
-            <property name="value" column="fecha" type="string" access="field" />
+        <component name="period" class="comLuz.processor.readings.domain.ReadingDate" access="field">
+            <property name="value" column="period" type="string" access="field" />
         </component>
 
-        <component name="importe" class="comLuz.processor.readings.domain.ReadingImport" access="field">
-            <property name="value" column="importe" type="int" access="field" />
+        <component name="amount" class="comLuz.processor.readings.domain.ReadingImport" access="field">
+            <property name="value" column="amount" type="int" access="field" />
         </component>
     </class>
 </hibernate-mapping>

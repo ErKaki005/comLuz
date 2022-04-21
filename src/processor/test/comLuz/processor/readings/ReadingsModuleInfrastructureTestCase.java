@@ -9,7 +9,7 @@ import shared.comLuz.insfrastructure.InfrastructureTestCase;
 public abstract class ReadingsModuleInfrastructureTestCase extends InfrastructureTestCase{
 
 	@Autowired
-	protected InMemoryReadingRepository repository;
+	protected InMemoryReadingRepository inMemoryRepository;
 	
 	@Autowired
     protected MySqlReadingRepository  mySqlReadingRepository;
